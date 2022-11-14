@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  token: string
+  
+  constructor(private platform: Platform,) {
+    console.log("constructor home")
+   }
 
 }

@@ -7,10 +7,14 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { Push } from '@awesome-cordova-plugins/push/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
+  entryComponents: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Push],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
